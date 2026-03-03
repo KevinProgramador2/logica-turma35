@@ -1,6 +1,6 @@
 programa
 {
-	
+	inclua biblioteca Matematica
 	funcao inicio()
 	{
 
@@ -27,7 +27,7 @@ programa
 		escreva("\nDigite a preco: ")
 		leia(preco)
 
-		escreva("O preco do terreno e de: ", preco )
+		escreva("O preco do terreno e de: ", preco, "$")
 
 	}
 }
@@ -36,7 +36,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 363; 
+ * @POSICAO-CURSOR = 478; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
