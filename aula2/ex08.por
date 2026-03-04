@@ -1,0 +1,36 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		/*
+		 * 8) Faça um algoritmo que leia a idade de uma pessoa e de acordo com a idade exiba a seguintes mensagens:
+Menor que 16 anos - não pode votar
+Entre 16 e 18 anos e maior que 70 anos - voto opcional
+Entre 18 e 70 anos - voto obrigatório
+
+		 */
+		
+inteiro  idade
+
+escreva("Diga sua idade: ")
+leia(idade)
+
+se(idade <= 16 ){
+	escreva("Voto opcional")
+	}	senao se(idade <= 18){
+	escreva("voto opcional")
+		}senao escreva("Voto obrigatorio")
+}
+}
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 483; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = ;
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
