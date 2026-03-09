@@ -3,10 +3,20 @@ programa
 	
 	funcao inicio()
 	{
-		caracter vogal [] = {'a','e','i','o','u'
-		}
-		para(inteiro i=4; i >=0 ; i--)
-		escreva(vogal[i], "\n")
+		real n1,n2
+		escreva("Digite a nota1:")
+		leia(n1)
+
+		escreva("Digite a nota2:")
+		leia(n2)
+
+		escreva("Medias:", calcular(n1,n2))
+	}
+	
+	funcao real calcular(real n1, real n2){
+		real media
+		media = (n1+n2)/2	
+		retorne media
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -14,9 +24,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 101; 
+ * @POSICAO-CURSOR = 91; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = vetor, matriz, funcao;
  */

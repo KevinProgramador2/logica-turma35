@@ -3,18 +3,28 @@ programa
 	
 	funcao inicio()
 	{
-		caracter vogal [] = {'a','e','i','o','u'
-		}
-		para(inteiro i=4; i >=0 ; i--)
-		escreva(vogal[i], "\n")
+		escreva("Inicio de programa")
+		mensagem()
+		escreva("\nFim de programa")
 	}
+	
+	funcao mensagem(){
+		escreva("\n******Resistencia 2026******")
+		texto()
+		escreva("\nFim de mensagem")
+	}
+		
+	funcao texto(){
+		escreva("\nAula de funcao")
+	}
+		
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 101; 
+ * @POSICAO-CURSOR = 227; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -3,10 +3,19 @@ programa
 	
 	funcao inicio()
 	{
-		caracter vogal [] = {'a','e','i','o','u'
-		}
-		para(inteiro i=4; i >=0 ; i--)
-		escreva(vogal[i], "\n")
+		inteiro numeroUm, numeroDois, resultado
+
+		numeroDois = 10 
+		numeroUm = 20
+		
+		resultado = somar(numeroUm, numeroDois)
+		escreva(resultado)
+	}
+	
+	funcao inteiro somar(inteiro x, inteiro y){
+	inteiro soma
+	soma = x + y
+	retorne soma
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -14,7 +23,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 101; 
+ * @POSICAO-CURSOR = 184; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
