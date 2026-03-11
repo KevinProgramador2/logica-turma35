@@ -19,23 +19,23 @@ programa{
 			escreva("\nCadidato B selecionado")
 			candidatoB++
 			totalVotos++
-			}
+		}
 		senao se(candidatos==3){
 			
 			escreva("\nVoto branco\n")
 			branco++
 			totalVotos++		
-				}
-		senao{
+		}
+		senao	{
 			escreva("Voto Anulado: ", nulo)
 			nulo++
 			totalVotos++}
 			
-	}enquanto(candidatos!=0)
+	}enquanto(candidatos != 0)
 	
 	
 	escreva("\n======RESULTADO FINAL======")
-	escreva("\nCandidato Lula ", candidatoA, " Votos ",(candidatoA*100)/totalVotos,"%")
+	escreva("\nCandidato Lula ", candidatoA, (candidatoA*100)/totalVotos,"%")
 	escreva("\nCandidato Bolsonaro ",candidatoB, " Votos ",(candidatoB*100)/totalVotos,"%")
 	escreva("\nBranco ", branco, " Votos ",(branco*100)/totalVotos,"%")
 	escreva("\nVotos Anulados: ",nulo, " Votos ",(nulo*100)/totalVotos,"%")
@@ -44,8 +44,6 @@ programa{
 	
 	escreva("\nTotal de votos e de: ", totalVotos)
 
-	
-	
 	}
 
 }
@@ -54,7 +52,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 136; 
+ * @POSICAO-CURSOR = 620; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
