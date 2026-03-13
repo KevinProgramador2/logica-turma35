@@ -1,4 +1,22 @@
-programa
+[16:57, 13/03/2026] Kevin: funcao verficarAlunosAtendidos()
+	{
+    
+    inteiro totalGeralAtendidos = totalMatriculas + alunosAtendidos
+
+    escreva("\n--- RELATÓRIO GERAL DE ATENDIMENTO ---\n")
+    escreva("Alunos Matriculados........: ", totalMatriculas, "\n")
+    escreva("Alunos que usaram Personal..: ", alunosAtendidos, "\n")
+    escreva("--------------------------------------\n")
+    escreva("TOTAL DE ATENDIMENTOS GERAIS: ", totalGeralAtendidos, "\n")
+    escreva("TOTAL ARREACADO : ",  faturamentoMatriculas += totalGeralAtendidos, "\n")
+    
+    cadeia pausa
+    escreva("\nPressione Enter para voltar ao menu...")
+    leia(pausa)
+    limpa()
+    
+	}
+[17:14, 13/03/2026] Kevin: programa
 {
 	inclua biblioteca Util
 	inteiro totalMatriculas = 0
@@ -270,14 +288,3 @@ programa
     
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 6452; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
