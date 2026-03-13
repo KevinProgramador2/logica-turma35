@@ -3,8 +3,6 @@ programa
 	inclua biblioteca Util
 	inteiro totalMatriculas = 0
 	inteiro totalAulasPersonal = 0
-	inteiro aulaMusc = 100
-	inteiro aulaFunc = 80
 	real faturamentoMatriculas = 0.0
 	real faturamentoAulas = 0.0, faturamentoAulasF = 0.0, faturamentoAulasM = 0.0
 	logico armarios[30]
@@ -12,7 +10,7 @@ programa
 	cadeia nomes[30]
 	cadeia telefones[30]
 	inteiro indiceMatricula = 0
-
+	inteiro alunosAtendidos = 0
 	funcao inicio()
 	{
 		inteiro opcao = 0
@@ -27,11 +25,14 @@ programa
 			escreva("\n==================================")
 			escreva("\n1 - Nova Matrícula")
 			escreva("\n2 - Aula Personal")
-			escreva("\n3 - Listar Armários")
+			escreva("\n3 - Listagem dos armários")
 			escreva("\n4 - Faturamento")
 			escreva("\n5 - Sair do Programa")
+			escreva("\n6 - Alunos atendidos")
 			escreva("\n==================================\n")
 			escreva("\nEscolha uma opção:")
+			
+			
 			leia(opcao)
 			
 			limpa()
@@ -55,12 +56,15 @@ programa
 					pare
 				caso 5:
 					escreva("Saindo do sistema. Bom treino!\n") 
-					Util.aguarde(500)
+					Util.aguarde(1000)
 					limpa()
+					pare
+					caso 6:
+					verficarAlunosAtendidos()
 					pare
 				caso contrario:
 					escreva("Opção inválida! Por favor, escolha de 1 a 5.\n")
-					Util.aguarde(500)
+					Util.aguarde(1000)
 					limpa()
 			}
 		} enquanto(opcao != 5)
@@ -68,7 +72,7 @@ programa
 
 	funcao novaMatricula()
     {
-        inteiro id
+        inteiro id 
         cadeia nome = "", telefone = "", desejaArmario = ""
 
         escreva("--- CADASTRO DE MATRÍCULA ---\n")
@@ -139,17 +143,19 @@ programa
 
         se(opcaoAula == 1) {
             faturamentoAulasM += 100.0
-            totalAulasPersonal+= 100.0
+            totalAulasPersonal += 100.0
+            alunosAtendidos++ 
             escreva("Digite a data desejada para aula: ")
-    		  leia(data)
+            leia(data)
             escreva("\nAula de Musculação marcada!\n")
         } senao se(opcaoAula == 2) {
             faturamentoAulasF += 80.0
-            totalAulasPersonal+= 80.0
+            totalAulasPersonal += 80.0
+            alunosAtendidos++ 
             escreva("Digite a data desejada para aula: ")
-    		  leia(data)
+            leia(data)
             escreva("\nAula Funcional marcada!\n")
-        } senao {
+        }senao {
             escreva("Tipo de aula inválido!\n")
         }
     } senao {
@@ -165,7 +171,7 @@ programa
 
 	funcao listarArmarios()
 	{
-		escreva("--- STATUS DOS ARMÁRIOS ---\n")
+		escreva("--- LISTAGEM DOS ARMÁRIOS ---\n")
 		para(inteiro i = 0; i < 30; i++)
 		{
 			se(armarios[i] == falso)
@@ -183,18 +189,18 @@ programa
 	}
 
 	funcao exibirFaturamento()
-{
-    escreva("--- RELATÓRIO DE FATURAMENTO ---\n")
-    escreva("Matrículas Ativas.....: ", totalMatriculas, " (R$ ", faturamentoMatriculas, ")\n")
-   
+	{
+    		escreva("--- RELATÓRIO DE FATURAMENTO ---\n")
+    		escreva("Matrículas Ativas.....: ", totalMatriculas, " (R$ ", faturamentoMatriculas, ")\n")
     
-    escreva("----------------------------------\n")
+    		escreva("----------------------------------\n")
     
-    escreva("Subtotal Musculação...: R$ ", faturamentoAulasM, "\n")
-    escreva("Subtotal Funcional....: R$ ", faturamentoAulasF, "\n")
+    		escreva("Subtotal Musculação...: R$ ", faturamentoAulasM, "\n")
+    		escreva("Subtotal Funcional....: R$ ", faturamentoAulasF, "\n")
     
-    escreva("----------------------------------\n")
-    escreva("FATURAMENTO TOTAL.....: R$ ", (faturamentoMatriculas + totalAulasPersonal), "\n")
+    		escreva("----------------------------------\n")
+    		escreva("FATURAMENTO TOTAL.....: R$ ", (faturamentoMatriculas + totalAulasPersonal), "\n")
+
     
     
     cadeia pausa
@@ -204,9 +210,6 @@ programa
 
 	funcao preencherDadosAluno(cadeia &nome, cadeia &telefone)
     {
-
-
-
         escreva("Nome do Aluno: ")
         leia(nome)
         escreva("Telefone: ")
@@ -247,14 +250,32 @@ programa
 	funcao verficarArmariosOcupados(){
 		escreva("Número de armário inválido!\n")
         
-		}
+	}
+	funcao verficarAlunosAtendidos()
+	{
+    
+    inteiro totalGeralAtendidos = totalMatriculas + alunosAtendidos
+
+    escreva("\n--- RELATÓRIO GERAL DE ATENDIMENTO ---\n")
+    escreva("Alunos Matriculados........: ", totalMatriculas, "\n")
+    escreva("Alunos que usaram Personal..: ", alunosAtendidos, "\n")
+    escreva("--------------------------------------\n")
+    escreva("TOTAL DE ATENDIMENTOS GERAIS: ", totalGeralAtendidos, "\n")
+    escreva("TOTAL ARRECADO : ",  faturamentoMatriculas + totalAulasPersonal, "\n")
+    
+    cadeia pausa
+    escreva("\nPressione Enter para voltar ao menu...")
+    leia(pausa)
+    limpa()
+    
+	}
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5480; 
+ * @POSICAO-CURSOR = 6452; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
