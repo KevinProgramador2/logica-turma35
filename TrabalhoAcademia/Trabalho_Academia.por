@@ -261,7 +261,7 @@ programa
     escreva("Alunos que usaram Personal..: ", alunosAtendidos, "\n")
     escreva("--------------------------------------\n")
     escreva("TOTAL DE ATENDIMENTOS GERAIS: ", totalGeralAtendidos, "\n")
-    escreva("TOTAL ARRECADO : ",  faturamentoMatriculas + totalAulasPersonal, "\n")
+    escreva("TOTAL ARRECADADO : ",  faturamentoMatriculas + totalAulasPersonal, "\n")
     
     cadeia pausa
     escreva("\nPressione Enter para voltar ao menu...")
@@ -275,7 +275,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6452; 
+ * @POSICAO-CURSOR = 6620; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
